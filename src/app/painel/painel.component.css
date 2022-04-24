@@ -1,0 +1,66 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
+
+.welcome-toolbar {
+    font-size: .557142857142857em;
+  line-height: 2.166666666666667em;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: .5px;
+  color: #252525;
+  margin: 15px;
+  padding: 15px;
+  font-family: Montserrat,'Roboto','Helvetica',Sans-Serif;
+}
+
+.date {
+  font-size: .957142857142857em;
+  line-height: 4.166666666666667em;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: .5px;
+  color: #252525;
+  margin: 15px;
+  padding: 15px;
+  margin-left: -200%;
+  font-family: Montserrat,'Roboto','Helvetica',Sans-Serif;
+}
+.chart-peso {
+    width: 80%;
+}
+.toolbar-title {
+    font-size: .657142857142857em;
+    line-height: 2.166666666666667em;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: .5px;
+    color: #252525;
+    margin: 15px;
+    padding: 15px;
+    cursor: pointer;
+    font-family: Montserrat,'Roboto','Helvetica',Sans-Serif;
+  }
+  .example-header-image {
+    background-image: url('/assets/img/PROFILE.png');
+    background-size: cover;
+  }
+  .fitness-header-image {
+    background-image: url('/assets/img/fitness_center.png');
+    background-size: cover;
+  }
+ 
+  mat-toolbar span {
+      cursor: pointer;
+
+    font-size: .557142857142857em;
+  line-height: 2.166666666666667em;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: .5px;
+  color: #252525;
+  margin: 15px;
+  padding: 15px;
+  font-family: Montserrat,'Roboto','Helvetica',Sans-Serif;
+  }
