@@ -1,0 +1,82 @@
+<mat-toolbar>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+
+    </button>
+    <!-- <mat-icon aria-hidden="false" aria-label="Example home icon">fitness_center</mat-icon> -->
+    <span [routerLink]="['/']" class="toolbar-title">My Fit Life</span>
+
+    <span class="example-spacer"></span>
+    <span [routerLink]="['/painel']">Perfil</span>
+
+    <span>Treinos</span>
+    <span> Progresso</span>
+
+    <p class="welcome-toolbar">
+        Bem Vindo, João da Silva
+    </p>
+</mat-toolbar>
+
+
+
+
+
+
+<!-- PAGE -->
+<mat-grid-list cols="12" rowHeight="80px">
+    <mat-grid-tile [rowspan]="1" colspan="9">
+        <div style="width: 15%;"> <span class="date">{{myDate | date: 'fullDate': '' : 'pt-BR' | titlecase }}</span>
+        </div>
+    </mat-grid-tile>
+    <mat-grid-tile [rowspan]="1" colspan="1">
+        <button mat-raised-button color="primary" [disabled]="this.currentExercicioIndex == 0"
+            (click)="previousExercise()">Exercício Anterior</button>
+
+    </mat-grid-tile>
+    <mat-grid-tile [rowspan]="1" colspan="1">
+        <button mat-raised-button color="primary" [disabled]="this.currentExercicioIndex + 1 >= this.exerciciosLength"
+            (click)="nextExercise()">Proxímo Exercício</button>
+    </mat-grid-tile>
+    <mat-grid-tile [rowspan]="1" colspan="3">
+        <p> <span class="length-toolbar"> Exercício {{this.currentExercicioIndex + 1}} de
+                {{this.exerciciosLength}}</span>
+        </p>
+    </mat-grid-tile>
+    <mat-grid-tile [rowspan]="1" colspan="5">
+    </mat-grid-tile>
+    <mat-grid-tile [rowspan]="1" colspan="4">
+        <div *ngIf="this.currentExercicioIndex + 1 >= this.exerciciosLength">
+            <button mat-raised-button color="primary" style="background-color: #00FF40; width: 100%;"  [routerLink]="['/painel/completo']">Completar Treino!</button>
+
+        </div>
+    </mat-grid-tile>
+    <mat-grid-tile [rowspan]="1" colspan="1"></mat-grid-tile>
+
+    <mat-grid-tile [rowspan]="10" colspan="10">
+
+        <mat-card class="example-card">
+            <mat-card-header>
+                <mat-card-title>{{this.currentExercicio.nome}}</mat-card-title>
+                <mat-card-subtitle>Peso: {{this.currentExercicio.peso}}</mat-card-subtitle>
+                <mat-card-subtitle>Séries: {{this.currentExercicio.series}}</mat-card-subtitle>
+
+            </mat-card-header>
+            <mat-card-content>
+                <p class="descricao-exercicio">
+                    {{this.currentExercicio.descricao}}
+
+                </p>
+                <div style="margin: 0 auto; text-align: center;">
+                    <youtube-player [videoId]="this.currentExercicio.url" suggestedQuality="highres" [height]="400"
+                        [width]="720">
+                    </youtube-player>
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </mat-grid-tile>
+    <mat-grid-tile [rowspan]="6" colspan="12">
+
+    </mat-grid-tile>
+
+
+
+</mat-grid-list>

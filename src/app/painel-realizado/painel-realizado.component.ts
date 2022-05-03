@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 
-
 const ELEMENT_DATA: Object[] = [
   { numero: 1, nome: 'Crucifixo', peso: '15kg', repeticoes: 10, series: 3 },
   { numero: 2, nome: 'Abdominal', peso: '-', repeticoes: 20, series: 3 },
@@ -17,29 +16,20 @@ const ELEMENT_DATA: Object[] = [
 
 ];
 @Component({
-  selector: 'app-painel',
-  templateUrl: './painel.component.html',
-  styleUrls: ['./painel.component.css']
+  selector: 'app-painel-realizado',
+  templateUrl: './painel-realizado.component.html',
+  styleUrls: ['./painel-realizado.component.css']
 })
-
-
-
-export class PainelComponent implements OnInit {
+export class PainelRealizadoComponent implements OnInit {
 
   constructor(public dialog: MatDialog) { }
 
   ngOnInit(): void {
   }
+
   myDate = new Date();
   chartType = 'line';
   openDialog(): void {
-
-    const dialogRef = this.dialog.open(DialogContentExampleDialog, {  height: '400px',
-    width: '400px',});
-
-    dialogRef.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result}`);
-    });
 
   }
 
@@ -99,9 +89,3 @@ export class PainelComponent implements OnInit {
 
 }
 
-
-@Component({
-  selector: 'dialog-content-example-dialog',
-  templateUrl: './dialog-content-example-dialog.html',
-})
-export class DialogContentExampleDialog {}
