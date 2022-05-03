@@ -34,7 +34,10 @@
     </mat-grid-tile>
 
     <mat-grid-tile [rowspan]="1" colspan="4">
-        <p class="parabens">Parabéns! Você realizou o treino de hoje, continue assim!</p>
+        <p class="parabens">Parabéns! Você realizou o treino de hoje, continue assim! <br>
+            Treinos realizados na semana: 2
+        </p>
+        <p></p>
     </mat-grid-tile>
     <mat-grid-tile [rowspan]="1" colspan="8">
     </mat-grid-tile>
@@ -46,6 +49,9 @@
                     </div>
                     <mat-card-title>João da Silva</mat-card-title>
                     <mat-card-subtitle>Avançado</mat-card-subtitle>
+                    <mat-card-actions style="text-align: right; margin-left: 40%">
+                        <button mat-button>Atualizar</button>
+                    </mat-card-actions>
                 </mat-card-header>
                 <mat-card-content>
 
@@ -64,6 +70,7 @@
 
 
                 </mat-card-content>
+                
             </mat-card>
         </div>
     </mat-grid-tile>
@@ -74,7 +81,7 @@
 
                     <div mat-card-avatar class="fitness-header-image"></div>
                     <mat-card-title>Treino de Hoje (Completado)</mat-card-title>
-                    <mat-card-subtitle>Abdômen, Superiores</mat-card-subtitle>
+                    <mat-card-subtitle>Abdômen e Superiores com Halteres</mat-card-subtitle>
                 </mat-card-header>
 
                 <mat-card-content>

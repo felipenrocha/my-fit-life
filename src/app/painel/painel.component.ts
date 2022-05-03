@@ -48,11 +48,11 @@ export class PainelComponent implements OnInit {
 
 
   chartDatasets = [
-    { data: [102, 95, 90, 88, 84, 86, 86], label: 'Peso' }
+    { data: [102, 95, 90, 88, 86], label: 'Peso' }
   ];
   displayedColumns: string[] = ['numero', 'nome', 'peso', 'repeticoes', 'series', 'acoes'];
   dataSource = ELEMENT_DATA;
-  chartLabels = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho'];
+  chartLabels = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio'];
 
   chartColors = [
     {
@@ -71,10 +71,10 @@ export class PainelComponent implements OnInit {
   chartType2 = 'line';
 
   chartDatasets2 = [
-    { data: [34, 32, 31, 28, 25, 25, 23, 24], label: 'Percentual de Gordura' }
+    { data: [34, 32, 31, 28, 29], label: 'Percentual de Gordura' }
   ];
 
-  chartLabels2 = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho'];
+  chartLabels2 = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio'];
 
   chartColors2 = [
 
